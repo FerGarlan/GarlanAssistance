@@ -75,13 +75,13 @@
                 <button onclick="showPage('condiciones')" class="text-sm font-medium hover:text-blue-700 transition">Condiciones</button>
                 <div class="h-6 w-[1px] bg-slate-200 hidden md:block"></div>
                 <button id="adminBtn" onclick="showPage('login')" class="text-sm font-bold text-slate-700 hover:text-blue-700 transition">Admin</button>
-                <button id="logoutBtn" onclick="logout()" class="hidden text-sm font-bold text-red-600">Cerrar Sesión</button>
+                <button id="logoutBtn" onclick="logout()" class="hidden text-sm font-bold text-red-600 transition hover:text-red-800">Cerrar Sesión</button>
             </div>
         </div>
     </nav>
 
     <main class="pt-20 min-h-screen">
-        <!-- HOME -->
+        <!-- SECCIÓN HOME -->
         <section id="home" class="page-view active">
             <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center text-center">
                 <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight text-slate-900">
@@ -106,127 +106,20 @@
                 </div>
                 
                 <div class="grid gap-6">
-                    <!-- FAQ 1 -->
                     <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
                         <div class="flex gap-4 items-start mb-4">
                             <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-hand-holding-medical"></i></span>
                             <p class="text-slate-800 font-semibold italic leading-relaxed">"Hola, si llego a tener un problema de salud en el viaje, ¿tengo que pagar yo la consulta y después pedir que me devuelvan la plata o ustedes se encargan de todo en el momento?"</p>
                         </div>
                         <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Garlan Assistance opera bajo un sistema de prestación directa; esto significa que, ante una emergencia debidamente notificada a nuestra central, nosotros gestionamos y cubrimos los gastos médicos directamente con el prestador de salud. En casos excepcionales donde la atención inmediata sea requerida sin intervención previa, el beneficiario podrá solicitar un reembolso posterior.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 2 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-suitcase-rolling"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"Tengo una duda con el tema de las valijas. Si la aerolínea me pierde el equipaje o se demora mucho en llegar, ¿qué tipo de ayuda me dan?"</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Contamos con un servicio de localización de equipaje para asistirlo en la gestión ante la línea aérea. Si su equipaje sufre una demora superior a las 8 horas, se activará una compensación para artículos de primera necesidad. En caso de pérdida definitiva, otorgamos una indemnización complementaria según los límites de su plan.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-language"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"¿Qué pasa si me enfermo en un país donde no hablo el idioma? Me preocupa no poder explicarle al médico lo que me pasa."</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Nuestra Central de Asistencia opera 24/7 con soporte multilingüe. Nuestros operadores actúan como intérpretes entre usted y el personal médico local para asegurar que reciba el diagnóstico correcto y comprenda todas las indicaciones.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-map-marked-alt"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"Si saco el seguro para un destino pero después decido cruzar a un país vecino, ¿estoy cubierto igual?"</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                La validez territorial depende del plan seleccionado. Los planes con validez "Mundial" cubren desplazamientos entre países sin trámites extra, salvo en destinos excluidos por condiciones generales. Siempre recomendamos confirmar cambios de itinerario con la central.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 5 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-envelope-open-text"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"Hice el pago hace un rato pero todavía no me llegó nada al mail. ¿Cómo confirmo si ya estoy asegurado?"</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                El certificado de asistencia se envía automáticamente tras el pago. Si no lo ve en su bandeja de entrada o spam, contáctenos de inmediato. La cobertura solo está vigente con el voucher emitido y el pago confirmado.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 6 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-calendar-times"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"Si por algún motivo grave al final no puedo viajar, ¿puedo recuperar lo que pagué por el seguro?"</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Ofrecemos planes con cláusulas de cancelación por causas justificadas (enfermedad grave o fallecimiento familiar). Para cancelaciones voluntarias, se aplican las políticas de reembolso vigentes según el tiempo de antelación.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 7 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-heartbeat"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"Tengo una condición médica crónica. ¿Si tengo una crisis durante el viaje, el seguro me cubre la atención?"</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Nuestros planes incluyen cobertura para la estabilización inicial de cuadros agudos derivados de preexistencias, permitiendo que reciba atención de urgencia para resolver el riesgo inmediato, bajo los topes de su plan.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 8 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-clock"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"Si me enfermo un fin de semana a la madrugada, ¿voy a encontrar a alguien que me atienda?"</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Nuestra central receptora opera las 24 horas, los 365 días del año. Independientemente de su zona horaria, siempre habrá un equipo listo para coordinar su atención médica de inmediato.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 9 -->
-                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                        <div class="flex gap-4 items-start mb-4">
-                            <span class="bg-blue-50 text-blue-700 p-2 rounded-lg"><i class="fas fa-hospital-user"></i></span>
-                            <p class="text-slate-800 font-semibold italic leading-relaxed">"En caso de necesitar un médico, ¿puedo ir a cualquier hospital o ustedes me dicen a dónde ir?"</p>
-                        </div>
-                        <div class="pl-12 border-l-4 border-blue-600 ml-6">
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                La central designa el centro médico basándose en cercanía y especialidad para garantizar el pago directo. Asistir por cuenta propia a centros fuera de la red sin autorización previa puede invalidar la cobertura directa.
-                            </p>
+                            <p class="text-slate-600 text-sm leading-relaxed">Garlan Assistance opera bajo un sistema de prestación directa; esto significa que, ante una emergencia debidamente notificada a nuestra central, nosotros gestionamos y cubrimos los gastos médicos directamente con el prestador de salud.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONDICIONES DEL SERVICIO -->
+        <!-- CONDICIONES -->
         <section id="condiciones" class="page-view">
             <div class="max-w-4xl mx-auto px-6 py-16">
                 <div class="flex justify-between items-center mb-10 border-b pb-6">
@@ -234,13 +127,13 @@
                         <h2 class="text-3xl font-black text-slate-900">Condiciones Generales</h2>
                         <p class="text-slate-500 mt-2 font-medium">Contrato de asistencia al viajero.</p>
                     </div>
-                    <a href="CONDICIONES_GENERALES_DEL_SERVICIO.pdf" download class="flex items-center gap-2 bg-blue-700 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-blue-800 transition">
+                    <a href="#" class="flex items-center gap-2 bg-blue-700 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-blue-800 transition">
                         <i class="fas fa-file-pdf"></i> Descargar PDF
                     </a>
                 </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                    <h3 class="text-xl font-bold mb-4 text-blue-700">I. INTRODUCCIÓN</h3>
-                    <p class="text-sm text-slate-600">Las presentes condiciones generales regulan la prestación de los servicios de asistencia al viajero por parte de Garlan Assistance...</p>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm leading-relaxed text-slate-600">
+                    <h3 class="text-xl font-bold mb-4 text-blue-700 uppercase tracking-tight">I. INTRODUCCIÓN</h3>
+                    <p class="text-sm">Las presentes condiciones generales regulan la prestación de los servicios de asistencia al viajero por parte de Garlan Assistance. Se deja constancia que este documento es parte integral del voucher emitido al momento de la contratación.</p>
                 </div>
             </div>
         </section>
@@ -256,12 +149,14 @@
         <!-- REEMBOLSOS -->
         <section id="reembolsos" class="page-view">
             <div class="max-w-4xl mx-auto mt-20 p-8 text-center">
-                <h2 class="text-3xl font-extrabold text-slate-900">Gestión de Reembolsos</h2>
-                <div class="grid md:grid-cols-2 gap-6 mt-12 text-left">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200">
-                        <i class="fas fa-file-invoice-dollar text-blue-700 text-2xl mb-4"></i>
-                        <h4 class="font-bold mb-2">Nueva Solicitud</h4>
-                        <button class="text-blue-700 font-bold text-sm uppercase">Iniciar formulario →</button>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-6">Gestión de Reembolsos</h2>
+                <p class="text-slate-500 mb-10">Si tuviste que afrontar un gasto por tu cuenta, podés iniciar la solicitud aquí.</p>
+                <div class="grid md:grid-cols-2 gap-6 text-left">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <i class="fas fa-file-invoice-dollar text-blue-700 text-3xl mb-4"></i>
+                        <h4 class="font-bold text-lg mb-2">Nueva Solicitud</h4>
+                        <p class="text-sm text-slate-500 mb-4">Iniciá el proceso cargando tus facturas y comprobantes médicos.</p>
+                        <button class="text-blue-700 font-bold text-sm uppercase tracking-wider hover:underline">Iniciar formulario →</button>
                     </div>
                 </div>
             </div>
@@ -270,39 +165,77 @@
         <!-- LOGIN ADMIN -->
         <section id="login" class="page-view">
             <div class="max-w-md mx-auto mt-20 p-8 bg-white rounded-2xl shadow-xl border border-slate-100">
-                <h2 class="text-2xl font-bold mb-6 text-center text-slate-800">Panel Administrativo</h2>
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-slate-800">Panel Administrativo</h2>
+                    <p class="text-slate-400 text-sm">Ingresá tus credenciales de Garlantech</p>
+                </div>
                 <form onsubmit="handleLogin(event)" class="space-y-4">
-                    <input type="text" id="username" placeholder="Usuario" class="w-full p-3 bg-slate-50 rounded-lg border border-slate-200">
-                    <input type="password" id="password" placeholder="Clave" class="w-full p-3 bg-slate-50 rounded-lg border border-slate-200">
-                    <button type="submit" class="w-full btn-primary text-white py-3.5 rounded-lg font-bold">Acceder</button>
+                    <input type="text" id="username" placeholder="Usuario" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                    <input type="password" id="password" placeholder="Contraseña" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                    <button type="submit" class="w-full btn-primary text-white py-4 rounded-xl font-bold shadow-lg shadow-blue-100">Acceder al Sistema</button>
                 </form>
             </div>
         </section>
 
-        <!-- ADMIN PANEL -->
+        <!-- ADMIN PANEL PRINCIPAL -->
         <section id="admin" class="page-view">
             <div class="max-w-7xl mx-auto px-6 py-12">
-                <div class="flex justify-between items-center mb-8">
-                    <h2 class="text-3xl font-extrabold text-slate-900">Gestión de Productos</h2>
-                    <button onclick="openPlanModal()" class="btn-primary text-white px-6 py-3 rounded-lg font-bold">Nuevo Plan</button>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+                    <div>
+                        <h2 class="text-3xl font-black text-slate-900">Panel de Control</h2>
+                        <p class="text-slate-500 font-medium">Gestión integral de la demo Garlantech</p>
+                    </div>
+                    <!-- TABS DE ADMIN -->
+                    <div class="flex bg-slate-100 p-1 rounded-xl">
+                        <button onclick="switchAdminTab('products')" id="tab-products" class="px-6 py-2 rounded-lg text-sm font-bold transition bg-white shadow-sm text-blue-700">Productos</button>
+                        <button onclick="switchAdminTab('config')" id="tab-config" class="px-6 py-2 rounded-lg text-sm font-bold transition text-slate-500 hover:text-slate-700">Configuración Bot</button>
+                    </div>
                 </div>
-                <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-                    <table class="w-full text-left">
-                        <thead class="bg-slate-50 border-b border-slate-200">
-                            <tr>
-                                <th class="p-4 text-xs font-bold uppercase">Plan</th>
-                                <th class="p-4 text-xs font-bold uppercase">Modalidad</th>
-                                <th class="p-4 text-xs font-bold uppercase">Tarifa USD</th>
-                                <th class="p-4 text-xs font-bold uppercase text-right">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="adminTable" class="divide-y divide-slate-100"></tbody>
-                    </table>
+
+                <!-- CONTENIDO TAB PRODUCTOS -->
+                <div id="admin-products-content">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-50 border-b border-slate-200">
+                                <tr>
+                                    <th class="p-6 text-xs font-bold uppercase text-slate-400">Plan</th>
+                                    <th class="p-6 text-xs font-bold uppercase text-slate-400">Modalidad</th>
+                                    <th class="p-6 text-xs font-bold uppercase text-slate-400">Tarifa USD</th>
+                                    <th class="p-6 text-xs font-bold uppercase text-slate-400 text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminTable" class="divide-y divide-slate-100"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- CONTENIDO TAB CONFIGURACIÓN BOT -->
+                <div id="admin-config-content" class="hidden">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 max-w-2xl">
+                        <h3 class="text-xl font-bold mb-4 text-slate-800">Inyección de Bot Cristóbal</h3>
+                        <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                            Para actualizar el bot sin tocar el código fuente, pegá aquí los identificadores que Botpress te proporciona en su código embebible. 
+                            La web inyectará automáticamente los scripts al cargar.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-400 mb-2">Bot ID / Script File URL</label>
+                                <input type="text" id="botpress-script-url" placeholder="Ej: 20260420140628-BV8XTPVA.js" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm font-mono">
+                                <p class="text-[10px] text-slate-400 mt-2 italic">Pegá el nombre del archivo .js que aparece en el segundo script de Botpress.</p>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <button onclick="saveBotConfig()" class="btn-primary text-white px-8 py-3 rounded-xl font-bold">Guardar y Reiniciar Bot</button>
+                                <button onclick="resetBotConfig()" class="text-slate-400 text-sm font-bold hover:text-red-500 transition">Eliminar Bot</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN AVISO LEGAL Y DEMO -->
+        <!-- FOOTER AVISO LEGAL -->
         <footer class="mt-20 border-t border-slate-200 bg-slate-50">
             <div class="max-w-5xl mx-auto px-6 py-12">
                 <div class="bg-white border border-blue-100 p-8 rounded-3xl shadow-sm">
@@ -310,116 +243,139 @@
                         <i class="fas fa-info-circle text-xl"></i>
                         <h2 class="text-lg font-bold uppercase tracking-wider">Aviso Legal y Demo</h2>
                     </div>
-                    
                     <div class="space-y-6 text-slate-600 leading-relaxed text-sm">
-                        <p class="font-bold text-slate-900 text-base italic text-center">
-                            IMPORTANTE: SITIO DE DEMOSTRACIÓN Y PRUEBAS
-                        </p>
-                        
-                        <p>
-                            Garlan Assistance es una empresa ficticia y no opera en el mercado de asistencia al viajero. Esta página ha sido creada exclusivamente para mostrar las capacidades y funcionalidades del portfolio de soluciones informáticas que <span class="font-bold">Garlantech</span> ofrece a empresas del sector.
-                        </p>
-                        
-                        <div class="grid md:grid-cols-3 gap-6 py-4">
-                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                                <h4 class="font-bold text-slate-900 mb-2 underline decoration-blue-500">No se comercializan coberturas</h4>
-                                <p class="text-xs">Los productos y tarifas aquí simulados no son reales ni pertenecen a ninguna empresa del mercado.</p>
-                            </div>
-                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                                <h4 class="font-bold text-slate-900 mb-2 underline decoration-blue-500">Vouchers sin validez</h4>
-                                <p class="text-xs">Cualquier documento emitido en este sitio no cuenta con respaldo médico o legal y no será reconocido por ninguna entidad.</p>
-                            </div>
-                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                                <h4 class="font-bold text-slate-900 mb-2 underline decoration-blue-500">Carácter ilustrativo</h4>
-                                <p class="text-xs">La sección de FAQs se basa en consultas reales del sector, pero sus respuestas son ficticias para fines de demo.</p>
-                            </div>
-                        </div>
-
-                        <p class="pt-4 border-t border-slate-100 text-center">
-                            Para obtener información sobre servicios de desarrollo de software, visite 
-                            <a href="http://www.garlantech.com" target="_blank" class="text-blue-700 font-bold hover:underline">www.garlantech.com</a>
-                        </p>
+                        <p class="font-bold text-slate-900 text-base italic text-center">IMPORTANTE: SITIO DE DEMOSTRACIÓN Y PRUEBAS</p>
+                        <p>Garlan Assistance es una empresa ficticia y no opera en el mercado de asistencia al viajero. Esta página ha sido creada exclusivamente para mostrar las capacidades y funcionalidades del portfolio de soluciones informáticas que <span class="font-bold text-blue-800">Garlantech</span> ofrece.</p>
+                        <p class="pt-4 border-t border-slate-100 text-center">Más info en <a href="http://www.garlantech.com" target="_blank" class="text-blue-700 font-bold hover:underline">www.garlantech.com</a></p>
                     </div>
                 </div>
-                <p class="text-center mt-8 text-slate-400 text-xs font-medium">© 2024 GarlanTech Portfolio - Entorno de Simulación Segura</p>
+                <p class="text-center mt-8 text-slate-400 text-xs font-medium">© 2024 GarlanTech Portfolio - Entorno de Simulación</p>
             </div>
         </footer>
     </main>
 
-    <!-- MODAL EDITOR -->
-    <div id="modal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onclick="closePlanModal()"></div>
-        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl relative flex flex-col max-h-[90vh] overflow-hidden">
-            <div class="p-6 border-b bg-slate-50 flex justify-between items-center">
-                <h3 class="text-xl font-bold" id="modalTitle">Editor de Plan</h3>
-                <button onclick="closePlanModal()" class="text-slate-400 text-2xl">&times;</button>
-            </div>
-            <form id="planForm" onsubmit="savePlan(event)" class="flex flex-col overflow-hidden">
-                <div class="p-6 overflow-y-auto modal-scroll space-y-6">
-                    <input type="hidden" id="editId">
-                    <div class="grid md:grid-cols-3 gap-4">
-                        <input type="text" id="editName" placeholder="Nombre" required class="w-full p-2.5 bg-slate-50 rounded-lg border">
-                        <input type="number" step="0.01" id="editPrice" placeholder="Precio USD" required class="w-full p-2.5 bg-slate-50 rounded-lg border">
-                        <select id="editDuration" class="w-full p-2.5 bg-slate-50 rounded-lg border">
-                            <option value="Por Día">Por Día</option>
-                            <option value="Anual">Anual</option>
-                        </select>
-                    </div>
-                    <div id="benefitList" class="grid md:grid-cols-2 gap-3"></div>
-                </div>
-                <div class="p-6 border-t bg-slate-50">
-                    <button type="submit" class="w-full py-3 btn-primary text-white rounded-lg font-bold">Guardar Cambios</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <script>
+        // DATOS INICIALES
         const MASTER_BENEFITS = ["Asistencia médica por accidente", "Emergencia dental", "Medicamentos", "Traslado sanitario", "Localización de equipaje", "Indemnización por pérdida", "Asistencia Legal"];
-        const initialPlans = [
+        const DEFAULT_BOT_SCRIPT = "20260420140628-BV8XTPVA.js"; 
+        
+        let plans = JSON.parse(localStorage.getItem('garlan_data')) || [
             { id: 1, name: "Garlan Lite", price: 6, duration: "Por Día", active: true, benefits: MASTER_BENEFITS.map(b => ({ label: b, value: "USD 10.000" })) },
             { id: 2, name: "Garlan Pro", price: 12, duration: "Por Día", active: true, benefits: MASTER_BENEFITS.map(b => ({ label: b, value: "USD 50.000" })) }
         ];
 
-        let plans = JSON.parse(localStorage.getItem('garlan_data')) || initialPlans;
-        let isAdmin = false;
-
+        // LÓGICA DE NAVEGACIÓN
         function showPage(pageId) {
             document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            
-            document.querySelectorAll('nav button').forEach(btn => {
-                btn.classList.remove('font-bold', 'text-blue-700');
-            });
-            const activeBtn = Array.from(document.querySelectorAll('nav button')).find(btn => btn.getAttribute('onclick')?.includes(pageId));
-            if(activeBtn) activeBtn.classList.add('font-bold', 'text-blue-700');
-
-            if(pageId === 'plans') renderPublicPlans();
-            if(pageId === 'admin') renderAdminTable();
+            const target = document.getElementById(pageId);
+            if(target) target.classList.add('active');
             window.scrollTo(0,0);
         }
 
+        // LÓGICA ADMIN TABS
+        function switchAdminTab(tab) {
+            const prodBtn = document.getElementById('tab-products');
+            const confBtn = document.getElementById('tab-config');
+            const prodContent = document.getElementById('admin-products-content');
+            const confContent = document.getElementById('admin-config-content');
+
+            if(tab === 'products') {
+                prodBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-700');
+                prodBtn.classList.remove('text-slate-500');
+                confBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-700');
+                confBtn.classList.add('text-slate-500');
+                prodContent.classList.remove('hidden');
+                confContent.classList.add('hidden');
+            } else {
+                confBtn.classList.add('bg-white', 'shadow-sm', 'text-blue-700');
+                confBtn.classList.remove('text-slate-500');
+                prodBtn.classList.remove('bg-white', 'shadow-sm', 'text-blue-700');
+                prodBtn.classList.add('text-slate-500');
+                confContent.classList.remove('hidden');
+                prodContent.classList.add('hidden');
+                
+                document.getElementById('botpress-script-url').value = localStorage.getItem('garlan_bot_script') || DEFAULT_BOT_SCRIPT;
+            }
+        }
+
+        // LÓGICA DE AUTH
         function handleLogin(e) {
             e.preventDefault();
-            if(document.getElementById('username').value === 'admin') {
-                isAdmin = true;
+            if(document.getElementById('username').value.toLowerCase() === 'admin') {
                 document.getElementById('adminBtn').classList.add('hidden');
                 document.getElementById('logoutBtn').classList.remove('hidden');
                 showPage('admin');
+                renderAdminTable();
             }
         }
 
         function logout() {
-            isAdmin = false;
             document.getElementById('adminBtn').classList.remove('hidden');
             document.getElementById('logoutBtn').classList.add('hidden');
             showPage('home');
         }
 
+        // GESTIÓN DE BOT DESDE ADMIN
+        function saveBotConfig() {
+            const scriptValue = document.getElementById('botpress-script-url').value.trim();
+            if(!scriptValue) return;
+            localStorage.setItem('garlan_bot_script', scriptValue);
+            location.reload(); 
+        }
+
+        function resetBotConfig() {
+            localStorage.removeItem('garlan_bot_script');
+            location.reload();
+        }
+
+        /**
+         * INYECCIÓN DINÁMICA DEL BOT
+         * Ajustado para manejar errores de script externo y carga secuencial
+         */
+        function injectBot() {
+            const scriptId = localStorage.getItem('garlan_bot_script') || DEFAULT_BOT_SCRIPT;
+            
+            // Configuración inicial del Webchat
+            window.botpressWebChat = {
+                "botName": "Cristóbal",
+                "botConversationDescription": "Asistente Virtual Garlan Assistance",
+                "showPoweredBy": false,
+                "enableTranscriptDownload": false
+            };
+
+            // Cargamos el Inyector primero
+            const injectScript = document.createElement('script');
+            injectScript.src = "https://cdn.botpress.cloud/webchat/v3.6/inject.js";
+            injectScript.async = true;
+            
+            injectScript.onload = () => {
+                // Una vez cargado el core, cargamos la configuración del bot específico
+                const botConfigScript = document.createElement('script');
+                const baseUrl = scriptId.includes('http') ? scriptId : `https://files.bpcontent.cloud/2026/04/20/14/${scriptId}`;
+                botConfigScript.src = baseUrl;
+                botConfigScript.defer = true;
+                
+                // Manejador de errores para evitar el [GLOBAL] Script Error
+                botConfigScript.onerror = () => {
+                    console.warn("No se pudo cargar la configuración de Botpress. Verifique el ID en el panel Admin.");
+                };
+
+                document.body.appendChild(botConfigScript);
+            };
+
+            injectScript.onerror = () => {
+                console.warn("Error cargando el motor de Botpress.");
+            };
+
+            document.body.appendChild(injectScript);
+        }
+
+        // RENDERIZADO
         function renderPublicPlans() {
             const grid = document.getElementById('plansGrid');
+            if(!grid) return;
             grid.innerHTML = plans.filter(p => p.active).map(p => `
-                <div class="plan-card bg-white rounded-2xl overflow-hidden flex flex-col h-full">
+                <div class="plan-card bg-white rounded-2xl overflow-hidden flex flex-col h-full border border-slate-100">
                     <div class="p-6 bg-slate-900 text-white">
                         <span class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-blue-600 rounded mb-4 inline-block">${p.duration}</span>
                         <h3 class="text-xl font-extrabold">${p.name}</h3>
@@ -427,23 +383,29 @@
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <div class="space-y-2 mb-6 max-h-64 overflow-y-auto pr-2 modal-scroll text-[11px]">
-                            ${p.benefits.map(b => `<div class="flex justify-between pb-1 border-b border-slate-50"><span>${b.label}</span><span class="font-bold">${b.value}</span></div>`).join('')}
+                            ${p.benefits.map(b => `
+                                <div class="flex justify-between pb-1 border-b border-slate-50 text-slate-600">
+                                    <span>${b.label}</span>
+                                    <span class="font-bold text-slate-800">${b.value}</span>
+                                </div>`).join('')}
                         </div>
-                        <button onclick="showPage('home')" class="w-full btn-primary text-white py-3 rounded-lg text-sm font-bold mt-auto">Comprar</button>
+                        <button onclick="showPage('home')" class="w-full btn-primary text-white py-3 rounded-lg text-sm font-bold mt-auto shadow-md shadow-blue-100">Contratar Plan</button>
                     </div>
                 </div>`).join('');
         }
 
         function renderAdminTable() {
             const table = document.getElementById('adminTable');
+            if(!table) return;
             table.innerHTML = plans.map(p => `
-                <tr class="${!p.active ? 'opacity-50' : ''}">
-                    <td class="p-4 font-bold">${p.name}</td>
-                    <td class="p-4 text-xs">${p.duration}</td>
-                    <td class="p-4 font-bold text-blue-700">$${p.price}</td>
-                    <td class="p-4 text-right flex justify-end gap-3">
-                        <button onclick="togglePlanStatus(${p.id})" class="font-bold text-xs uppercase">${p.active ? 'Inactivar' : 'Activar'}</button>
-                        <button onclick="editPlan(${p.id})" class="text-blue-600 font-bold text-xs uppercase">Editar</button>
+                <tr class="${!p.active ? 'opacity-40 grayscale' : ''} transition">
+                    <td class="p-6 font-bold text-slate-800">${p.name}</td>
+                    <td class="p-6 text-xs font-medium text-slate-500">${p.duration}</td>
+                    <td class="p-6 font-black text-blue-700 italic">$${p.price}</td>
+                    <td class="p-6 text-right flex justify-end gap-3">
+                        <button onclick="togglePlanStatus(${p.id})" class="text-[10px] font-black uppercase tracking-tighter ${p.active ? 'text-red-500' : 'text-green-600'} hover:underline">
+                            ${p.active ? 'Desactivar' : 'Reactivar'}
+                        </button>
                     </td>
                 </tr>`).join('');
         }
@@ -456,48 +418,13 @@
                 renderAdminTable();
             }
         }
-
-        function generateBenefitInputs(planBenefits = []) {
-            const container = document.getElementById('benefitList');
-            container.innerHTML = "";
-            MASTER_BENEFITS.forEach(bName => {
-                const exist = planBenefits.find(b => b.label === bName);
-                const val = exist ? exist.value : "";
-                const div = document.createElement('div');
-                div.className = "flex flex-col bg-slate-50 p-2 rounded-lg border";
-                div.innerHTML = `<label class="text-[9px] font-bold text-slate-400 uppercase mb-1">${bName}</label><input type="text" data-label="${bName}" value="${val}" class="benefit-input w-full bg-white p-1.5 rounded text-[11px] font-bold text-blue-700 outline-none border border-slate-200">`;
-                container.appendChild(div);
-            });
-        }
-
-        function editPlan(id) {
-            const p = plans.find(x => x.id === id);
-            if (!p) return;
-            document.getElementById('editId').value = p.id;
-            document.getElementById('editName').value = p.name;
-            document.getElementById('editPrice').value = p.price;
-            document.getElementById('editDuration').value = p.duration;
-            generateBenefitInputs(p.benefits);
-            document.getElementById('modal').classList.remove('hidden');
-        }
-
-        function savePlan(e) {
-            e.preventDefault();
-            const id = document.getElementById('editId').value;
-            const bInputs = document.querySelectorAll('.benefit-input');
-            const benefits = Array.from(bInputs).map(inp => ({ label: inp.getAttribute('data-label'), value: inp.value.trim() || "Incluido" }));
-            const data = { id: id ? parseInt(id) : Date.now(), name: document.getElementById('editName').value, price: parseFloat(document.getElementById('editPrice').value), duration: document.getElementById('editDuration').value, active: true, benefits: benefits };
-            if(id) { const idx = plans.findIndex(x => x.id === parseInt(id)); plans[idx] = data; } else { plans.push(data); }
-            localStorage.setItem('garlan_data', JSON.stringify(plans));
-            closePlanModal();
-            renderAdminTable();
-        }
-
-        function closePlanModal() { document.getElementById('modal').classList.add('hidden'); }
-        function openPlanModal() { document.getElementById('editId').value = ""; document.getElementById('planForm').reset(); generateBenefitInputs([]); document.getElementById('modal').classList.remove('hidden'); }
         
-        window.onload = () => showPage('home');
+        // INICIO
+        window.onload = () => {
+            showPage('home');
+            renderPublicPlans();
+            injectBot();
+        };
     </script>
 </body>
 </html>
-
